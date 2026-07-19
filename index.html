@@ -2309,7 +2309,7 @@
         const name=run.result?.name||activeRunName();
         score=Math.max(knownBestScores.get(name)||0,run.score);
       }
-      const text=`Star Hop\n\n${resultLine}Best Score:\n${score}\n\n${STAR_HOP_GAME_URL}`;
+      const text=`Hey, try Star Hop! 🦘 Hop across planets 🪐, collect stars ⭐ and survive the cosmic journey!\n\n${resultLine}My best score is:\n${score}\n\n${STAR_HOP_GAME_URL}`;
       try {
         if (navigator.share) await navigator.share({title:"Star Hop",text});
         else if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); showToast("Score copied for launch"); }
